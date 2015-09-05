@@ -23,20 +23,27 @@ var get_relatedwords = function(op,word){
     };
 
     Request(options,function(response){
+        if(response){
+            console.log('no '+op+'nymss found')
+            return;
+        }
         if (op=='syn') {
             var len = response.length;
-            var count = 0;
+        //    var count = 0;
             for (i=0;i<len;i++){
                 if (response[i].relationshipType=='synonym'){
                     console.log("synonyms :"+response[i].words);
-                    // count++;
+//                    count++;
                 }
             }
-            if(count==0){
-                console.log("Sorry, no synonyms found");
-            }
+            // if(count==0){
+            //     console.log("Sorry, no synonyms found");
+            //     console.log("hi");
+            // }
+
 
         } else if(op=='ant'){
+            console.log(op);
             var len = response.length;
             var count = 0;
             for (i=0;i<len;i++){
@@ -65,11 +72,11 @@ var get_relatedwords = function(op,word){
                 }
             }
             if(count1==0){
-                console.log("Synonyms : Sorry, no synonyms found")
+                console.log("Sorry, no synonyms found")
             }
 
             if(count2==0){
-                console.log("Antonyms : Sorry, no antonyms found");
+                console.log("Sorry, no antonyms found");
             }
 
         }

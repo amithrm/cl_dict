@@ -25,6 +25,10 @@ var get_definitions = function(word){
     };
 
     Request(options,function(response){
+        if(!Object.keys(response).length){
+            console.log("no definitions found");
+            return;
+        }
         var len = response.length;
         var limit = limit<len?limit:len;
         for (i=0;i<limit;i++){

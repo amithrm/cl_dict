@@ -34,6 +34,7 @@ var get_examples = function(word){
         for (i=0;i<limit;i++){
             console.log('example :'+(i+1)+'\n'+response.examples[i].text);
         }
+        console.log("\n");
 
     });
 }

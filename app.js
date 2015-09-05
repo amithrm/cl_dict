@@ -6,6 +6,12 @@ var Get_DictWordOtd = require('./getdictwordotd.js')
 var op = process.argv[2];
 var word = process.argv[3];
 
+if (op==undefined&&word==undefined){
+    op ='wotd';
+} else if (op!=undefined&&word==undefined){
+    word = op
+    op ='dict';
+}
 
 switch (op){
 case 'ex':
@@ -15,6 +21,7 @@ case 'ex':
 case 'def':
     console.log('word : '+word);
     Get_Definitions(word);
+    break;
     break;
 case 'syn':
     console.log('word : '+word);
@@ -30,6 +37,10 @@ case 'dict':
     Get_Definitions(word);
     Get_RelatedWords('synant',word);
     break;
-case undefined:
+case 'play':
+case 'wotd':
     Get_DictWordOtd();
+    break;
+default:
+    console.log("not a valid request");
 }

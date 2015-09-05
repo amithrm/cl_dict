@@ -34,6 +34,7 @@ var get_definitions = function(word){
         for (i=0;i<limit;i++){
             console.log('definition '+(i+1)+':\n'+response[i].text);
         }
+        console.log('\n');
     });
 }
 

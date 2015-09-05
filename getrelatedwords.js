@@ -65,11 +65,11 @@ var get_relatedwords = function(op,word){
                 }
             }
             if(count1==0){
-                console.log("Sorry, no antonyms found")
+                console.log("Synonyms : Sorry, no synonyms found")
             }
 
             if(count2==0){
-                console.log("Sorry, no antonyms found");
+                console.log("Antonyms : Sorry, no antonyms found");
             }
 
         }

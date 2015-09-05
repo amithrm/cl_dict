@@ -25,8 +25,10 @@ var get_examples = function(word){
     };
 
     Request(options,function(response){
+        var len = response.examples.length;
+        var limit = limit<len?limit:len;
         for (i=0;i<limit;i++){
-            console.log('example '+(i+1)+':\n'+response.examples[i].text);
+            console.log('example :'+(i+1)+'\n'+response.examples[i].text);
         }
     });
 }

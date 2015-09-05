@@ -1,7 +1,5 @@
 var request = require('request');
 
-var limit = 5;
-
 var Request = function performRequest(options,callback){
     request(options, function (error, response, body) {
         if (error){

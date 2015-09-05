@@ -25,6 +25,8 @@ var get_definitions = function(word){
     };
 
     Request(options,function(response){
+        var len = response.length;
+        var limit = limit<len?limit:len;
         for (i=0;i<limit;i++){
             console.log('definition '+(i+1)+':\n'+response[i].text);
         }

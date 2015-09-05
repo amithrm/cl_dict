@@ -26,3 +26,20 @@ function success(obj) {
     return obj;
 }
 module.exports = Request;
+var d = new date();
+        var datestring = d.getfullyear()+'-'+d.getmonth()+'-'+d.getdate();
+        path = 'word.json/'+word+'/definitions'
+        host += path;
+        var querystring ={
+            date : datestring,
+            api_key : "a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
+        }
+        var options = {
+            host: host,
+            qs : querystring,
+            method: "get",
+            headers : {
+                'content-type' : 'application/json'
+            }
+
+        };

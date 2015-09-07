@@ -29,7 +29,7 @@ var get_relatedwords = function(op,word){
             for (i=0;i<len;i++){
                 if (response[i].relationshipType=='synonym'){
                     console.log("synonyms :"+response[i].words);
-                    // count++;
+                    count++;
                 }
             }
             console.log('\n');

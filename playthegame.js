@@ -3,7 +3,7 @@ var Get_Examples = require('./getexamples.js')
 var Get_Definitions = require('./getdefinitions.js')
 var Get_RelatedWords = require('./getrelatedwords.js')
 
-var getwordoftheday = function(){
+var playthegame = function(){
     var host = "http://api.wordnik.com:80/v4/";
     var d = new Date();
     var yyyy = d.getFullYear().toString();
